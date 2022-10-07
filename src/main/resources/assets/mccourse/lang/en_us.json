@@ -2,9 +2,9 @@
   "item.mccourse.orichalcum_ingot": "Orichalcum Ingot",
   "item.mccourse.orichalcum_nugget": "Orichalcum Nugget",
 
-  "block.mccourse.orcichalcum_block": "Orichalcum Block",
-  "block.mccourse.orcichalcum_ore": "Orichalcum Ore",
+  "block.mccourse.orichalcum_block": "Orichalcum Block",
+  "block.mccourse.orichalcum_ore": "Orichalcum Ore",
 
-  "ItemGroup.mccourse.course": "Course Tab"
+  "itemGroup.mccourse.course": "Course Tab"
 
 }
