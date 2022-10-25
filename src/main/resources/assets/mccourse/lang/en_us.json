@@ -14,6 +14,10 @@
 
   "itemGroup.mccourse.course": "Course Tab",
 
-  "item.mccourse.dowsing_rod.no_valuables": "No valuables found"
+  "item.mccourse.dowsing_rod.no_valuables": "No valuables found",
+
+  "item.mccourse.dowsing_rod.tooltip.shift": "Right click to find valuables",
+  "item.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more information"
+
 
 }
