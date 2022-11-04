@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.faintful.mccourse.Item.ModItemGroups;
 import net.faintful.mccourse.MCCourseMod;
+import net.faintful.mccourse.block.custom.ModStairsBlock;
 import net.faintful.mccourse.block.custom.SpeedyBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -20,6 +22,8 @@ public class ModBlocks {
     public static final Block ORICHALCUM_ORE = registerBlock("orichalcum_ore", new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE);
     public static final Block DEEPSLATE_ORICHALCUM_ORE = registerBlock("deepslate_orichalcum_ore", new Block(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool()), ModItemGroups.COURSE);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block", new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool()), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_STAIRS = registerBlock("orichalcum_stairs", new ModStairsBlock(ModBlocks.ORICHALCUM_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_SLAB = registerBlock("orichalcum_slab", new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
