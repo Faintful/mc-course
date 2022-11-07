@@ -26,6 +26,9 @@ public class ModBlocks {
     public static final Block ORICHALCUM_SLAB = registerBlock("orichalcum_slab", new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
     public static final Block ORICHALCUM_PRESSURE_PLATE = registerBlock("orichalcum_pressure_plate", new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
     public static final Block ORICHALCUM_BUTTON = registerBlock("orichalcum_button", new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_FENCE = registerBlock("orichalcum_fence", new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_FENCE_GATE = registerBlock("orichalcum_fence_gate", new FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall", new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
