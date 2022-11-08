@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.faintful.mccourse.MCCourseMod"
+    ],
+    "client": [
+      "net.faintful.mccourse.MCCourseClient"
     ]
   },
   "mixins": [
