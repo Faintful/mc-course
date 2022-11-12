@@ -24,6 +24,8 @@ public class ModItems {
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword", new SwordItem(ModToolMaterial.ORICHALCUM, 3, 3f, new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel", new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    public static final Item ORICHALCUM_SWORD_OF_FATIGUE = registerItem("orichalcum_sword_of_fatigue", new ModSlowingSwordItem(ModToolMaterial.ORICHALCUM, 3, 3f, new FabricItemSettings().group(ModItemGroups.COURSE)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
     }
