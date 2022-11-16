@@ -31,6 +31,11 @@
 
   "item.mccourse.orichalcum_sword_of_fatigue": "Orichalcum Sword of Fatigue",
 
+  "item.mccourse.orichalcum_helmet": "Orichalcum Helmet",
+  "item.mccourse.orichalcum_chestplate": "Orichalcum Chestplate",
+  "item.mccourse.orichalcum_leggings": "Orichalcum Leggings",
+  "item.mccourse.orichalcum_boots": "Orichalcum Boots",
+
   "itemGroup.mccourse.course": "Course Tab",
 
   "item.mccourse.dowsing_rod.no_valuables": "No valuables found",

@@ -3,6 +3,8 @@ package net.faintful.mccourse.Item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.faintful.mccourse.Item.custom.*;
 import net.faintful.mccourse.MCCourseMod;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
@@ -25,6 +27,11 @@ public class ModItems {
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel", new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_SWORD_OF_FATIGUE = registerItem("orichalcum_sword_of_fatigue", new ModSlowingSwordItem(ModToolMaterial.ORICHALCUM, 3, 3f, new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_HELMET = registerItem("orichalcum_helmet", new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.COURSE)));
+    public static final Item ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate", new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.COURSE)));
+    public static final Item ORICHALCUM_LEGGINGS = registerItem("orichalcum_leggings", new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.COURSE)));
+    public static final Item ORICHALCUM_BOOTS = registerItem("orichalcum_boots", new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
