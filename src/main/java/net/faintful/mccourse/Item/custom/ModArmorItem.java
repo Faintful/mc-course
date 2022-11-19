@@ -15,10 +15,7 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
-                    .put(ModArmorMaterials.ORICHALCUM,
-                            new StatusEffectInstance(StatusEffects.HASTE, 400, 1)).build();
+    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP = new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>().put(ModArmorMaterials.ORICHALCUM, new StatusEffectInstance(StatusEffects.HASTE, 400, 1)).build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
