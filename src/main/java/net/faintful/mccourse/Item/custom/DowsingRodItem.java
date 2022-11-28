@@ -1,14 +1,16 @@
 package net.faintful.mccourse.Item.custom;
 
+import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.util.InventoryUtil;
 import net.faintful.mccourse.util.ModTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -43,8 +45,11 @@ public class DowsingRodItem extends Item {
             for (int i = 0; i <= positionClicked.getY(); i++) {
                 Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
                 if (isValuableBlock(blockBelow)) {
-                    outputValuableCoordinates(positionClicked, player, blockBelow);
+                    outputValuableCoordinates(positionClicked.add(0, -i, 0), player, blockBelow);
                     foundBlock = true;
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
+                        addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
+                    }
                     break;
                 }
             }
@@ -54,6 +59,13 @@ public class DowsingRodItem extends Item {
         }
         context.getStack().damage(1, context.getPlayer(), (player) -> player.sendToolBreakStatus(player.getActiveHand()));
         return super.useOnBlock(context);
+    }
+
+    private void addNbtToDataTablet(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet = player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET));
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("mccourse.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" + pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+        dataTablet.setNbt(nbtData);
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow) {
