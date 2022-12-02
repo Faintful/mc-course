@@ -3,6 +3,7 @@ package net.faintful.mccourse.Item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.faintful.mccourse.Item.custom.*;
 import net.faintful.mccourse.MCCourseMod;
+import net.faintful.mccourse.block.ModBlocks;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -23,6 +24,7 @@ public class ModItems {
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword", new SwordItem(ModToolMaterial.ORICHALCUM, 3, 3f, new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel", new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f, new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item DATA_TABLET = registerItem("data_tablet", new DataTabletItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+    public static final Item TURNIP_SEEDS = registerItem("turnip_seeds", new AliasedBlockItem(ModBlocks.TURNIP_CROP, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_SWORD_OF_FATIGUE = registerItem("orichalcum_sword_of_fatigue", new ModSlowingSwordItem(ModToolMaterial.ORICHALCUM, 3, 3f, new FabricItemSettings().group(ModItemGroups.COURSE)));
 

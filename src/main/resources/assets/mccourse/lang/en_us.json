@@ -7,6 +7,8 @@
   "item.mccourse.turnip": "Turnip",
   "item.mccourse.coal_sliver": "Coal Sliver",
 
+  "item.mccourse.turnip_seeds": "Turnip Seeds",
+
   "block.mccourse.raw_orichalcum_block": "Raw Orichalcum Block",
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
@@ -21,6 +23,8 @@
 
   "block.mccourse.speedy_block": "Speedy Block",
   "block.mccourse.orichalcum_lamp": "Orichalcum Lamp",
+
+  "block.mccourse.turnip_crop": "Turnip Crop",
 
   "block.mccourse.orichalcum_button": "Orichalcum Button",
   "block.mccourse.orichalcum_pressure_plate": "Orichalcum Pressure Plate",

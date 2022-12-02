@@ -29,10 +29,15 @@ public class ModBlocks {
     public static final Block CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door", new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
     public static final Block CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor", new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
     public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp", new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)), ModItemGroups.COURSE);
+    public static final Block TURNIP_CROP = registerBlockWithoutBlock("turnip_crop", new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
+        return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockWithoutBlock(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
     }
 
