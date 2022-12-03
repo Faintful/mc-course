@@ -17,7 +17,7 @@ public class MCCourseMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModRegistries.registerFuels();
+		ModRegistries.registerModRegistries();
 		ModEnchantments.registerModEnchantments();
 	}
 }
