@@ -4,6 +4,7 @@
   "package": "net.faintful.mccourse.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ModEntityDataSaver"
   ],
   "client": [
     "ExampleMixin"
