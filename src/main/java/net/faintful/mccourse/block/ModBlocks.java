@@ -6,6 +6,7 @@ import net.faintful.mccourse.Item.ModItemGroups;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.block.custom.*;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -30,6 +31,7 @@ public class ModBlocks {
     public static final Block CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor", new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
     public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp", new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)), ModItemGroups.COURSE);
     public static final Block TURNIP_CROP = registerBlockWithoutBlock("turnip_crop", new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
+    public static final Block PINK_ROSE = registerBlock("pink_rose", new FlowerBlock(StatusEffects.GLOWING, 8, FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
