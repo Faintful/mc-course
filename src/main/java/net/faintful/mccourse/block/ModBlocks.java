@@ -32,6 +32,7 @@ public class ModBlocks {
     public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp", new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)), ModItemGroups.COURSE);
     public static final Block TURNIP_CROP = registerBlockWithoutBlock("turnip_crop", new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
     public static final Block PINK_ROSE = registerBlock("pink_rose", new FlowerBlock(StatusEffects.GLOWING, 8, FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
+    public static final Block POTTED_PINK_ROSE = registerBlockWithoutBlock("potted_pink_rose", new FlowerPotBlock(ModBlocks.PINK_ROSE, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM)));
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
