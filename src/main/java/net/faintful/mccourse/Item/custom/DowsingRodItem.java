@@ -1,6 +1,7 @@
 package net.faintful.mccourse.Item.custom;
 
 import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.sound.ModSounds;
 import net.faintful.mccourse.util.InventoryUtil;
 import net.faintful.mccourse.util.ModTags;
 import net.minecraft.block.Block;
@@ -11,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -50,6 +52,7 @@ public class DowsingRodItem extends Item {
                     if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
                         addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
                     }
+                    context.getWorld().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE, SoundCategory.BLOCKS, 1f, 1f);
                     break;
                 }
             }

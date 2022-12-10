@@ -1,0 +1,8 @@
+{
+  "dowsing_rod_found_ore.ogg": {
+    "subtitle": "mccourse.dowsing_rod_found_ore",
+    "sounds": [
+      "mccourse:dowsing_rod_found_ore"
+    ]
+  }
+}
