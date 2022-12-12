@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.faintful.mccourse.Item.ModItemGroups;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.block.custom.*;
+import net.faintful.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -29,7 +30,7 @@ public class ModBlocks {
     public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall", new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
     public static final Block CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door", new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
     public static final Block CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor", new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
-    public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp", new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp", new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0).sounds(ModSounds.ORICHALCUM_SOUNDS)), ModItemGroups.COURSE);
     public static final Block TURNIP_CROP = registerBlockWithoutBlock("turnip_crop", new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
     public static final Block PINK_ROSE = registerBlock("pink_rose", new FlowerBlock(StatusEffects.GLOWING, 8, FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
     public static final Block POTTED_PINK_ROSE = registerBlockWithoutBlock("potted_pink_rose", new FlowerPotBlock(ModBlocks.PINK_ROSE, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM)));
