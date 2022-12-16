@@ -34,6 +34,7 @@ public class ModBlocks {
     public static final Block TURNIP_CROP = registerBlockWithoutBlock("turnip_crop", new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
     public static final Block PINK_ROSE = registerBlock("pink_rose", new FlowerBlock(StatusEffects.GLOWING, 8, FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
     public static final Block POTTED_PINK_ROSE = registerBlockWithoutBlock("potted_pink_rose", new FlowerPotBlock(ModBlocks.PINK_ROSE, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM)));
+    public static final Block ORICHALCUM_BLASTER = registerBlock("orichalcum_blaster", new OrichalcumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroups.COURSE);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
