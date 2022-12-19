@@ -25,6 +25,7 @@ public class ModItems {
     public static final Item TURNIP_SEEDS = registerItem("turnip_seeds", new AliasedBlockItem(ModBlocks.TURNIP_CROP, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_STAFF = registerItem("orichalcum_staff", new Item(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+    public static final Item ORICHALCUM_BOW = registerItem("orichalcum_bow", new BowItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
     public static final Item ORICHALCUM_PICKAXE = registerItem("orichalcum_pickaxe", new ModPickaxeItem(ModToolMaterial.ORICHALCUM, 1, 2f, new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_SHOVEL = registerItem("orichalcum_shovel", new ShovelItem(ModToolMaterial.ORICHALCUM, 1, 2f, new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_AXE = registerItem("orichalcum_axe", new ModAxeItem(ModToolMaterial.ORICHALCUM, 3, 1f, new FabricItemSettings().group(ModItemGroups.COURSE)));

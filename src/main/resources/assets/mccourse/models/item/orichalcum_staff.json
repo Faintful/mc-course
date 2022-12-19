@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "minecraft:oak_planks",
-		"2": "minecraft:dark_oak_planks",
-		"3": "mccourse:orichalcum_block",
-		"4": "minecraft:gold_block",
-		"particle": "minecraft:oak_planks"
+		"1": "minecraft:block/oak_planks",
+		"2": "minecraft:block/dark_oak_planks",
+		"3": "mccourse:block/orichalcum_block",
+		"4": "minecraft:block/gold_block",
+		"particle": "minecraft:block/oak_planks"
 	},
 	"elements": [
 		{
