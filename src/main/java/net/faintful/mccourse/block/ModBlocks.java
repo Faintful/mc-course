@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.faintful.mccourse.Item.ModItemGroups;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.block.custom.*;
+import net.faintful.mccourse.fluid.ModFluids;
 import net.faintful.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
@@ -16,6 +17,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
+    public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutBlock("honey_fluid_block", new ModFluidBlock(ModFluids.HONEY_STILL, FabricBlockSettings.of(Material.WATER).noCollision().nonOpaque().dropsNothing()));
     public static final Block ORICHALCUM_BLOCK = registerBlock("orichalcum_block", new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ModItemGroups.COURSE);
     public static final Block RAW_ORICHALCUM_BLOCK = registerBlock("raw_orichalcum_block", new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE);
     public static final Block ORICHALCUM_ORE = registerBlock("orichalcum_ore", new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE);

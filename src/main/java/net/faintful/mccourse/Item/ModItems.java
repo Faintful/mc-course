@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.faintful.mccourse.Item.custom.*;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.block.ModBlocks;
+import net.faintful.mccourse.fluid.ModFluids;
 import net.faintful.mccourse.sound.ModSounds;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -21,6 +22,7 @@ public class ModItems {
 
     public static final Item DATA_TABLET = registerItem("data_tablet", new DataTabletItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
     public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc", new ModMusicDiscItem(9, ModSounds.BAR_BRAWL, new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+    public static final Item HONEY_BUCKET = registerItem("honey_bucket", new BucketItem(ModFluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
     public static final Item TURNIP_SEEDS = registerItem("turnip_seeds", new AliasedBlockItem(ModBlocks.TURNIP_CROP, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
