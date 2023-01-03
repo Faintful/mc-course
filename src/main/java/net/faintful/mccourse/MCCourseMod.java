@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.faintful.mccourse.Item.ModItems;
 import net.faintful.mccourse.block.ModBlocks;
 import net.faintful.mccourse.enchantment.ModEnchantments;
+import net.faintful.mccourse.util.ModLootTableModifiers;
 import net.faintful.mccourse.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,5 +20,6 @@ public class MCCourseMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModRegistries.registerModRegistries();
 		ModEnchantments.registerModEnchantments();
+		ModLootTableModifiers.modifyLootTables();
 	}
 }
