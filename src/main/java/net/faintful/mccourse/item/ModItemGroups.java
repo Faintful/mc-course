@@ -1,4 +1,4 @@
-package net.faintful.mccourse.Item;
+package net.faintful.mccourse.item;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.faintful.mccourse.MCCourseMod;

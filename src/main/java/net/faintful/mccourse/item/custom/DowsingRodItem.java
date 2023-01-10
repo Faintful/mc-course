@@ -1,6 +1,6 @@
-package net.faintful.mccourse.Item.custom;
+package net.faintful.mccourse.item.custom;
 
-import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.sound.ModSounds;
 import net.faintful.mccourse.util.InventoryUtil;
 import net.faintful.mccourse.util.ModTags;

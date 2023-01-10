@@ -1,7 +1,7 @@
 package net.faintful.mccourse.util;
 
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
-import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.MCCourseMod;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;

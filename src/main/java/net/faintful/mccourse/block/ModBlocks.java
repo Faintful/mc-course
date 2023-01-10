@@ -2,7 +2,7 @@ package net.faintful.mccourse.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.faintful.mccourse.Item.ModItemGroups;
+import net.faintful.mccourse.item.ModItemGroups;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.block.custom.*;
 import net.faintful.mccourse.fluid.ModFluids;

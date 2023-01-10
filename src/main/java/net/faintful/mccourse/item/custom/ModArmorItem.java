@@ -1,7 +1,7 @@
-package net.faintful.mccourse.Item.custom;
+package net.faintful.mccourse.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.faintful.mccourse.Item.ModArmorMaterials;
+import net.faintful.mccourse.item.ModArmorMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;

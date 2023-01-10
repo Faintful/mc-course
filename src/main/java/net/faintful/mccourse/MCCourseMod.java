@@ -1,7 +1,8 @@
 package net.faintful.mccourse;
 
 import net.fabricmc.api.ModInitializer;
-import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.block.entity.ModBlockEntities;
+import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.block.ModBlocks;
 import net.faintful.mccourse.enchantment.ModEnchantments;
 import net.faintful.mccourse.painting.ModPaintings;
@@ -23,5 +24,6 @@ public class MCCourseMod implements ModInitializer {
 		ModEnchantments.registerModEnchantments();
 		ModLootTableModifiers.modifyLootTables();
 		ModPaintings.registerPaintings();
+		ModBlockEntities.registerAllEntities();
 	}
 }

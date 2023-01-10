@@ -3,7 +3,7 @@ package net.faintful.mccourse.util;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.command.ReturnHomeCommand;
 import net.faintful.mccourse.command.SetHomeCommand;

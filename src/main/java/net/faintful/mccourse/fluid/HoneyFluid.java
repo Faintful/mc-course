@@ -1,7 +1,7 @@
 package net.faintful.mccourse.fluid;
 
 import net.faintful.mccourse.block.ModBlocks;
-import net.faintful.mccourse.Item.ModItems;
+import net.faintful.mccourse.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;

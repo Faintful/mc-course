@@ -1,4 +1,4 @@
-package net.faintful.mccourse.Item.custom;
+package net.faintful.mccourse.item.custom;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;

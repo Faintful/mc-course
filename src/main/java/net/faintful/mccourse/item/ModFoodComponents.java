@@ -1,6 +1,5 @@
-package net.faintful.mccourse.Item;
+package net.faintful.mccourse.item;
 
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
