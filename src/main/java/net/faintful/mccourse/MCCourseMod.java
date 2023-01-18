@@ -6,6 +6,7 @@ import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.block.ModBlocks;
 import net.faintful.mccourse.enchantment.ModEnchantments;
 import net.faintful.mccourse.painting.ModPaintings;
+import net.faintful.mccourse.recipe.ModRecipes;
 import net.faintful.mccourse.util.ModLootTableModifiers;
 import net.faintful.mccourse.util.ModRegistries;
 import org.slf4j.Logger;
@@ -25,5 +26,6 @@ public class MCCourseMod implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 		ModPaintings.registerPaintings();
 		ModBlockEntities.registerAllEntities();
+		ModRecipes.register();
 	}
 }

@@ -1,5 +1,6 @@
 package net.faintful.mccourse.screen;
 
+
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.faintful.mccourse.MCCourseMod;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
@@ -31,6 +32,15 @@ public class OrichalcumBlasterScreen extends HandledScreen<OrichalcumBlasterScre
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
+
+        if(handler.isCrafting()) {
+            drawTexture(matrices, x + 84, y + 22, 176, 14, handler.getScaledProgress(), 36);
+        }
+
+        if(handler.hasFuel()) {
+            drawTexture(matrices, x + 18, y + 33 + 14 - handler.getScaledFuelProgress(), 176,
+                    14 - handler.getScaledFuelProgress(), 14, handler.getScaledFuelProgress());
+        }
     }
 
     @Override
