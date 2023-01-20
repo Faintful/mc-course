@@ -37,7 +37,11 @@ public class ModBlocks {
     public static final Block PINK_ROSE = registerBlock("pink_rose", new FlowerBlock(StatusEffects.GLOWING, 8, FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
     public static final Block POTTED_PINK_ROSE = registerBlockWithoutBlock("potted_pink_rose", new FlowerPotBlock(ModBlocks.PINK_ROSE, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM)));
     public static final Block ORICHALCUM_BLASTER = registerBlock("orichalcum_blaster", new OrichalcumBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroups.COURSE);
-
+    public static final Block CHERRY_BLOSSOM_LOG = registerBlock("cherry_blossom_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ModItemGroups.COURSE);
+    public static final Block CHERRY_BLOSSOM_WOOD = registerBlock("cherry_blossom_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ModItemGroups.COURSE);
+    public static final Block STRIPPED_CHERRY_BLOSSOM_LOG = registerBlock("stripped_cherry_blossom_log", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroups.COURSE);
+    public static final Block STRIPPED_CHERRY_BLOSSOM_WOOD = registerBlock("stripped_cherry_blossom_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroups.COURSE);
+    public static final Block CHERRY_BLOSSOM_PLANKS = registerBlock("cherry_blossom_planks", new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ModItemGroups.COURSE);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
