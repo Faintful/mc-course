@@ -9,6 +9,7 @@ import net.faintful.mccourse.painting.ModPaintings;
 import net.faintful.mccourse.recipe.ModRecipes;
 import net.faintful.mccourse.util.ModLootTableModifiers;
 import net.faintful.mccourse.util.ModRegistries;
+import net.faintful.mccourse.world.feature.ModConfiguredFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +20,7 @@ public class MCCourseMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModRegistries.registerModRegistries();
