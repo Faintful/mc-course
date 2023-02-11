@@ -20,7 +20,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ORICHALCUM_ORE_PLACED_KEY = registerKey("orichalcum_ore_placed");
 
     public static final PlacedFeature CHERRY_BLOSSOM_PLACED = registerPlacedFeature("cherry_blossom_placed", ModConfiguredFeatures.CHERRY_BLOSSOM_TREE_RANDOM.withPlacement(VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2))));
-    public static final PlacedFeature ORICHALCUM_ORE_PLACED = registerPlacedFeature("orichalcum_ore_placed", ModConfiguredFeatures.ORICHALCUM_ORE.withPlacement(ModOreFeatures.modifiersWithCount(7, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(80)))));
+    public static final PlacedFeature ORICHALCUM_ORE_PLACED = registerPlacedFeature("orichalcum_ore_placed", ModConfiguredFeatures.ORICHALCUM_ORE.withPlacement(ModOreFeatures.modifiersWithCount(35, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(72), YOffset.aboveBottom(200)))));
+
+    public static final PlacedFeature PINK_ROSE_PLACED = registerPlacedFeature("pink_rose_placed", ModConfiguredFeatures.PINK_ROSE.withPlacement(RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()));
 
     private static PlacedFeature registerPlacedFeature(String name, PlacedFeature placedFeature) {
         return Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(MCCourseMod.MOD_ID, name), placedFeature);
@@ -29,8 +31,4 @@ public class ModPlacedFeatures {
     private static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MCCourseMod.MOD_ID, name));
     }
-
-    public static final PlacedFeature PINK_ROSE_PLACED = registerPlacedFeature("pink_rose_placed",
-            ModConfiguredFeatures.PINK_ROSE.withPlacement(RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(),
-                    PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()));
 }
