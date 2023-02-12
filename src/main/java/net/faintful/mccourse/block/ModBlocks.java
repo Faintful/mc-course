@@ -20,9 +20,9 @@ import net.minecraft.util.registry.Registry;
 public class ModBlocks {
 
     public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutBlock("honey_fluid_block", new ModFluidBlock(ModFluids.HONEY_STILL, FabricBlockSettings.of(Material.WATER).noCollision().nonOpaque().dropsNothing()));
-    public static final Block ORICHALCUM_BLOCK = registerBlock("orichalcum_block", new OreBlock(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(), UniformIntProvider.create(3, 7)), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_BLOCK = registerBlock("orichalcum_block", new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ModItemGroups.COURSE);
+    public static final Block ORICHALCUM_ORE = registerBlock("orichalcum_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool(), UniformIntProvider.create(3, 7)), ModItemGroups.COURSE);
     public static final Block RAW_ORICHALCUM_BLOCK = registerBlock("raw_orichalcum_block", new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE);
-    public static final Block ORICHALCUM_ORE = registerBlock("orichalcum_ore", new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE);
     public static final Block DEEPSLATE_ORICHALCUM_ORE = registerBlock("deepslate_orichalcum_ore", new Block(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool()), ModItemGroups.COURSE);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block", new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool()), ModItemGroups.COURSE);
     public static final Block ORICHALCUM_STAIRS = registerBlock("orichalcum_stairs", new ModStairsBlock(ModBlocks.ORICHALCUM_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
@@ -48,6 +48,7 @@ public class ModBlocks {
     public static final Block CHERRY_BLOSSOM_SIGN_BLOCK = registerBlockWithoutBlockItem("cherry_blossom_sign", new SignBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS), ModSignTypes.CHERRY_BLOSSOM));
     public static final Block CHERRY_BLOSSOM_LEAVES = registerBlock("cherry_blossom_leaves", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ModItemGroups.COURSE);
     public static final Block CHERRY_BLOSSOM_SAPLING = registerBlock("cherry_blossom_sapling", new ModSaplingBlock(new CherryBlossomSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroups.COURSE);
+    public static final Block WINTER_WINDOW = registerBlock("winter_window", new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(3.0f)), ModItemGroups.COURSE);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
