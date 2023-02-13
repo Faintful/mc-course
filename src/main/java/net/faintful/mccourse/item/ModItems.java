@@ -24,6 +24,8 @@ public class ModItems {
     public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc", new ModMusicDiscItem(9, ModSounds.BAR_BRAWL, new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
     public static final Item HONEY_BUCKET = registerItem("honey_bucket", new BucketItem(ModFluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
+    public static final Item MAGIC_ORICHALCUM_DUST = registerItem("magic_orichalcum_dust", new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
     public static final Item TURNIP_SEEDS = registerItem("turnip_seeds", new AliasedBlockItem(ModBlocks.TURNIP_CROP, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_STAFF = registerItem("orichalcum_staff", new Item(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
