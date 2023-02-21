@@ -3,6 +3,7 @@ package net.faintful.mccourse;
 import net.fabricmc.api.ModInitializer;
 import net.faintful.mccourse.block.entity.ModBlockEntities;
 import net.faintful.mccourse.config.ModConfigs;
+import net.faintful.mccourse.effect.ModEffects;
 import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.block.ModBlocks;
 import net.faintful.mccourse.enchantment.ModEnchantments;
@@ -38,5 +39,7 @@ public class MCCourseMod implements ModInitializer {
 		ModPaintings.registerPaintings();
 
 		ModWorldGen.generateModWorldGen();
+
+		ModEffects.registerEffects();
 	}
 }
