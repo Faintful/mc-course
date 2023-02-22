@@ -10,6 +10,12 @@
   "item.mccourse.coal_sliver": "Coal Sliver",
   "item.mccourse.honey_bucket": "Honey Bucket",
 
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
+  "effect.mccourse.freeze": "Freeze",
+
   "item.mccourse.magic_orichalcum_dust": "Magic Orichalcum Dust",
 
   "block.mccourse.cherry_blossom_sign": "Cherry Blossom Sign",

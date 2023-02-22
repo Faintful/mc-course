@@ -8,6 +8,7 @@ import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.block.ModBlocks;
 import net.faintful.mccourse.enchantment.ModEnchantments;
 import net.faintful.mccourse.painting.ModPaintings;
+import net.faintful.mccourse.potion.ModPotions;
 import net.faintful.mccourse.recipe.ModRecipes;
 import net.faintful.mccourse.util.ModLootTableModifiers;
 import net.faintful.mccourse.util.ModRegistries;
@@ -41,5 +42,6 @@ public class MCCourseMod implements ModInitializer {
 		ModWorldGen.generateModWorldGen();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 	}
 }
