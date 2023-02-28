@@ -1,6 +1,7 @@
 package net.faintful.mccourse.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.faintful.mccourse.entity.ModEntities;
 import net.faintful.mccourse.item.custom.*;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.block.ModBlocks;
@@ -12,6 +13,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+
+    public static final Item RACCOON_SPAWN_EGG = registerItem("raccoon_spawn_egg", new SpawnEggItem(ModEntities.RACCOON,0x948e8d, 0x3b3635, new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_INGOT = registerItem("orichalcum_ingot", new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_NUGGET = registerItem("orichalcum_nugget", new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));

@@ -2,9 +2,12 @@ package net.faintful.mccourse.util;
 
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.faintful.mccourse.block.ModBlocks;
+import net.faintful.mccourse.entity.ModEntities;
+import net.faintful.mccourse.entity.custom.RaccoonEntity;
 import net.faintful.mccourse.item.ModItems;
 import net.faintful.mccourse.MCCourseMod;
 import net.faintful.mccourse.command.ReturnHomeCommand;
@@ -20,6 +23,7 @@ public class ModRegistries {
         registerCommands();
         registerEvents();
         registerStrippables();
+        registerAttributes();
     }
 
     public static void registerFuels() {
@@ -46,6 +50,10 @@ public class ModRegistries {
     private static void registerStrippables() {
         StrippableBlockRegistry.register(ModBlocks.CHERRY_BLOSSOM_LOG, ModBlocks.STRIPPED_CHERRY_BLOSSOM_LOG);
         StrippableBlockRegistry.register(ModBlocks.CHERRY_BLOSSOM_WOOD, ModBlocks.STRIPPED_CHERRY_BLOSSOM_WOOD);
+    }
+
+    private static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
     }
 
 }

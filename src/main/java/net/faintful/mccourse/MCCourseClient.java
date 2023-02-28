@@ -5,10 +5,13 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.faintful.mccourse.block.ModBlocks;
 import net.faintful.mccourse.block.custom.OrichalcumBlasterBlock;
+import net.faintful.mccourse.entity.ModEntities;
+import net.faintful.mccourse.entity.client.RaccoonRenderer;
 import net.faintful.mccourse.event.ReplaceTitleScreenEvent;
 import net.faintful.mccourse.fluid.ModFluids;
 import net.faintful.mccourse.screen.ModScreenHandlers;
@@ -44,5 +47,6 @@ public class MCCourseClient implements ClientModInitializer {
 
         ScreenEvents.BEFORE_INIT.register(new ReplaceTitleScreenEvent());
 
+        EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
     }
 }
