@@ -5,6 +5,7 @@ import net.faintful.mccourse.sound.ModSounds;
 import net.faintful.mccourse.util.InventoryUtil;
 import net.faintful.mccourse.util.ModTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -45,8 +46,10 @@ public class DowsingRodItem extends Item {
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
             for (int i = 0; i <= positionClicked.getY(); i++) {
-                Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
-                if (isValuableBlock(blockBelow)) {
+                BlockState stateBelow = context.getWorld().getBlockState(positionClicked.down(i));
+                Block blockBelow = stateBelow.getBlock();
+
+                if (isValuableBlock(stateBelow)) {
                     outputValuableCoordinates(positionClicked.add(0, -i, 0), player, blockBelow);
                     foundBlock = true;
                     if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
@@ -75,8 +78,8 @@ public class DowsingRodItem extends Item {
         player.sendMessage(new LiteralText("Found " + blockBelow.asItem().getName().getString() + " at (" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false );
     }
 
-    private boolean isValuableBlock(Block block) {
-        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
+    private boolean isValuableBlock(BlockState block) {
+        return block.isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
         //return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE;
     }
 }
