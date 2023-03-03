@@ -37,6 +37,8 @@ public class MCCourseMod implements ModInitializer {
 
 		ModRecipes.register();
 
+		ModRegistries.registerModRegistries();
+
 		ModPaintings.registerPaintings();
 
 		ModWorldGen.generateModWorldGen();
